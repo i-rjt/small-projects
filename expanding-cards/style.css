@@ -1,0 +1,87 @@
+:root{
+    --blue: rgb(4, 4, 77);
+    --black: rgb(44, 44, 44);
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.heading{
+    background: radial-gradient(ellipse, var(--black),var(--blue));
+    color: white;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+    color: white;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 50px;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 5px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel h3{
+    font-size: 22px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media(max-width: 480px){
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5),.panel:last-child{
+        display: none;
+    }
+}
+
+.one{
+    background-image: url("https://res.cloudinary.com/dunm1zbgo/image/upload/v1738846849/wheat_eigcdx.jpg");
+}
+
+.two{
+    background-image: url("https://res.cloudinary.com/dunm1zbgo/image/upload/v1738846844/boy_ix414g.jpg");
+}
+
+.three{
+    background-image: url("./static/gyeongbokgung-6257203_1920.jpg");
+}
+
+.four{
+    background-image: url("https://res.cloudinary.com/dunm1zbgo/image/upload/v1738846848/stan_o1ezvw.jpg");
+}
+
+.five{
+    background-image: url("https://res.cloudinary.com/dunm1zbgo/image/upload/v1738846846/rise_jx7e68.jpg");
+}
+
+.six{
+    background-image: url("https://res.cloudinary.com/dunm1zbgo/image/upload/v1738846850/girl_pge2mr.jpg");
+}
